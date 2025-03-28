@@ -17,7 +17,7 @@ app.post('/submit', upload.none(), (req, res) => {
         service: 'gmail',
         auth: {
             user: 'klessick07@gmail.com',
-            pass: 'ovfynsnejyvsrsij' // Replace with your actual App Password
+            pass: 'process.env.EMAIL_PASSWORD' // Replace with your actual App Password
         }
     });
 
