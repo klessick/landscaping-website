@@ -3,8 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - [Your Company]</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Services - [Your Company]</title>
+    <link rel="preload" href="style.css" as="style" onload="this.rel='stylesheet'">
+    <style>
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        .loader.hidden {
+            display: none;
+        }
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #4caf50;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 <body>
     <div class="loader" id="loader">
@@ -22,18 +51,25 @@
         </nav>
     </header>
 
-    <section class="about">
-        <h2>About Us</h2>
-        <p>With 10 years of experience, [Your Company] brings premium landscaping to [Your City]. Our team is dedicated to transforming outdoor spaces into stunning retreats.</p>
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <h3>Lawn Maintenance</h3>
+            <p>Starting at $50/month. Keep your lawn lush and green.</p>
+        </div>
+        <div class="service">
+            <h3>Garden Design</h3>
+            <p>Custom designs starting at $200. Beauty meets function.</p>
+        </div>
+        <div class="service">
+            <h3>Hardscaping</h3>
+            <p>Patios and walkways starting at $500. Built to last.</p>
+        </div>
     </section>
 
     <footer>
         <p>© 2025 [Your Company]. All rights reserved.</p>
     </footer>
-    <footer>
-        <p>© 2025 [Your Company]. All rights reserved.</p>
-    </footer>
-    <script src="script.js"></script>
     <script>
         window.addEventListener('load', () => {
             document.getElementById('loader').classList.add('hidden');
