@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+    </div>
     <header>
         <nav>
             <h1>[Your Company]</h1>
@@ -38,5 +41,14 @@
     <footer>
         <p>© 2025 [Your Company]. All rights reserved.</p>
     </footer>
+    <footer>
+        <p>© 2025 [Your Company]. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            document.getElementById('loader').classList.add('hidden');
+        });
+    </script>
 </body>
 </html>
