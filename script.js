@@ -3,7 +3,7 @@ document.getElementById('contact-form').addEventListener('submit', async (e) => 
     const form = e.target;
     const formData = new FormData(form);
 
-    const response = await fetch('https://artescapes.onrender.com/submit', {
+    const response = await fetch('/api/submit', {
         method: 'POST',
         body: formData
     });
